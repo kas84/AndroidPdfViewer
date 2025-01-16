@@ -108,9 +108,8 @@ class DragPinchManager implements GestureDetector.OnGestureListener, GestureDete
                     (int) pageSize.getHeight(), link.getBounds());
             mapped.sort();
             Log.d("PDF LINK", "Tapped coordinates: x = " + Float.toString(mappedX) + " , y = " + Float.toString(mappedY));
-            Log.d("PDF LINK", "Link offset: x = " + Float.toString(pageX) + " , y = " + Float.toString(pageY));
-            Log.d("PDF LINK", "Link rectangle: left = " + Float.toString(link.getBounds().left) + " , right = " + Float.toString(link.getBounds().right)
-                    + " , top = " + Float.toString(link.getBounds().top) + " , bottom = " + Float.toString(link.getBounds().bottom));
+            Log.d("PDF LINK", "Link rectangle: left = " + Float.toString(mapped.left) + " , right = " + Float.toString(mapped.right)
+                     + " , bottom = " + Float.toString(mapped.bottom) + " , top = " + Float.toString(mapped.top));
 
             if (mapped.contains(mappedX, mappedY)) {
                 pdfView.callbacks.callLinkHandler(new LinkTapEvent(x, y, mappedX, mappedY, mapped, link));
