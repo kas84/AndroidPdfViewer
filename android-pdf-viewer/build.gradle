@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'maven-publish'
 
 group = 'com.github.zoltaneusz'
-version = '3.2.5'
+version = '3.3.0'
 
 android {
     namespace "com.github.barteksc.pdfviewer"
@@ -12,7 +12,7 @@ android {
         minSdkVersion 30
         targetSdkVersion 34
         versionCode 1
-        versionName "3.2.5"
+        versionName "3.3.0"
     }
 
     buildTypes {
@@ -47,7 +47,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:support-annotations:28.0.0'
     implementation 'androidx.core:core:1.7.0'
-    api 'com.github.Zoltaneusz:PdfiumAndroid:1dce15309f'
+    api 'com.github.Zoltaneusz:PdfiumAndroid:1.10.0'
 }
 
 afterEvaluate {
@@ -58,7 +58,7 @@ afterEvaluate {
 
                 groupId = 'com.github.zoltaneusz'
                 artifactId = 'pdf-viewer'
-                version = '3.2.5'
+                version = '3.3.0'
 
             }
         }
